@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manto Store | Camisas de Futebol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dark-blue: #0A1929;
+            --manto-orange: #F37021; 
+            --off-white: #F5F5F1;
+        }
+        body { background-color: var(--off-white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .primary-bg { background-color: var(--dark-blue); }
+        .accent-bg { background-color: var(--manto-orange); }
+        
+        .carousel-container { display: flex; transition: transform 0.5s ease-in-out; }
+        .product-card { min-width: calc(100% / 3); padding: 0 10px; }
+        @media (max-width: 768px) { .product-card { min-width: 100%; } }
+        
+        .img-switch { transition: opacity 0.5s; }
+    </style>
+</head>
+<body>
+
+    <header class="primary-bg text-white py-6 shadow-2xl border-b border-orange-900/30 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center gap-5">
+                <img src="img/logo.jpeg" alt="Manto Store Logo" class="h-20 w-auto rounded-lg border-2 border-orange-500 shadow-lg shadow-orange-500/20">
+                <div>
+                    <h1 class="text-2xl font-black tracking-tighter leading-none">MANTO STORE</h1>
+                    <p class="text-[10px] italic text-orange-400 mt-1 uppercase tracking-widest">A sua segunda pele</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex gap-6 font-bold text-xs uppercase tracking-widest">
+                <a href="#colecao" class="hover:text-orange-500 transition-colors">Coleção 2026</a>
+                <a href="#brasileiras" class="hover:text-orange-500 transition-colors">Brasileiras</a>
+                <a href="#tailandesas" class="hover:text-orange-500 transition-colors">Tailandesas 1:1</a>
+                <a href="#retro" class="hover:text-orange-500 transition-colors">Retrô</a>
+                <a href="#" class="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition">WHATSAPP</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4 space-y-20">
+
+        <section id="colecao" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-orange-500 pl-4 text-slate-800 uppercase">Coleção 2026</h3>
+            <div class="relative overflow-hidden">
+                <div class="carousel-container" id="carousel-colecao">
+                    <div class="product-card">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                            <div class="relative h-72 overflow-hidden group">
+                                <img src="img/camisa-brasil-home-2026.webp" alt="Brasil Home" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                                <img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6 text-center">
+                                <span class="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026</h4>
+                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="brasileiras" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-green-600 pl-4 text-slate-800 uppercase">Brasileiras</h3>
+            <div class="relative overflow-hidden">
+                <div class="carousel-container" id="carousel-brasileiras">
+                    <div class="product-card">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                            <div class="relative h-72 overflow-hidden group">
+                                <img src="img/camisa-1-corinthians-2026-frente.png" alt="Corinthians" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                                <img src="img/camisa-1-corinthians-2026-costas.png" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6 text-center">
+                                <span class="text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">Corinthians I 2026</h4>
+                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 179,90</p>
+                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                            <div class="relative h-72 overflow-hidden group">
+                                <img src="img/camisa-2-corinthians-2026-frente.png" alt="Corinthians" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                                <img src="img/camisa-2-corinthians-2026-costas.png" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6 text-center">
+                                <span class="text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">Corinthians II 2026</h4>
+                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 179,90</p>
+                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tailandesas" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-blue-500 pl-4 text-slate-800 uppercase">Tailandesas 1:1</h3>
+            <div class="relative overflow-hidden">
+                <div class="carousel-container" id="carousel-tailandesas">
+                    <div class="product-card">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                            <div class="relative h-72 overflow-hidden group">
+                                <img src="img/camisa-real-1.jpg" alt="Real Madrid" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                                <img src="img/camisa-real-2.jpg" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6 text-center">
+                                <span class="text-[10px] font-black bg-blue-100 text-blue-600 px-2 py-1 rounded">IMPORTADA</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">Real Madrid 2026</h4>
+                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 199,90</p>
+                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="retro" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-yellow-500 pl-4 text-slate-800 uppercase">Retrô Classic</h3>
+            <div class="relative overflow-hidden">
+                <div class="carousel-container" id="carousel-retro">
+                    <div class="product-card">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                            <div class="relative h-72 overflow-hidden group">
+                                <img src="img/camisa-retro-1.jpg" alt="França 98" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                                <img src="img/camisa-retro-2.jpg" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6 text-center">
+                                <span class="text-[10px] font-black bg-yellow-100 text-yellow-700 px-2 py-1 rounded">VINTAGE</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">França 1998 - Zidane</h4>
+                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 229,90</p>
+                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function setupCarousel(id) {
+            const container = document.getElementById(id);
+            let index = 0;
+            const totalCards = container.querySelectorAll('.product-card').length;
+            
+            function move() {
+                const cardsPerView = window.innerWidth > 768 ? 3 : 1;
+                if (totalCards <= cardsPerView) return; // Não gira se tiver poucos itens
+                
+                index++;
+                if (index > totalCards - cardsPerView) {
+                    index = 0;
+                }
+                container.style.transform = `translateX(-${index * (100 / cardsPerView)}%)`;
+            }
+            setInterval(move, 4000);
+        }
+
+        // Inicializa cada carrossel separadamente
+        setupCarousel('carousel-colecao');
+        setupCarousel('carousel-brasileiras');
+        setupCarousel('carousel-tailandesas');
+        setupCarousel('carousel-retro');
+    </script>
+
+    <footer class="primary-bg text-gray-500 py-12 text-center text-xs px-4">
+        <p class="font-bold text-gray-400 uppercase tracking-widest mb-2">MANTO STORE - © 2026</p>
+        <p>Enviamos para todo o Brasil via Melhor Envio | Trocas em até 2 dias.</p>
+    </footer>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manto Store | Camisas de Futebol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dark-blue: #0A1929;
+            --manto-orange: #F37021; 
+            --off-white: #F5F5F1;
+        }
+        body { background-color: var(--off-white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .primary-bg { background-color: var(--dark-blue); }
+        .accent-bg { background-color: var(--manto-orange); }
+        
+        /* Estilos para o Carrossel */
+        .carousel-container { display: flex; transition: transform 0.5s ease-in-out; }
+        .product-card { min-width: calc(100% / 3); padding: 0 10px; }
+        @media (max-width: 768px) { .product-card { min-width: 100%; } }
+        
+        /* Efeito de troca de imagem 0.5s */
+        .img-switch { transition: opacity 0.5s; }
+    </style>
+</head>
+<body>
+
+    <header class="primary-bg text-white py-6 shadow-2xl border-b border-orange-900/30">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center gap-5">
+                <img src="img\logo.jpeg" alt="Manto Store Logo" class="h-24 w-auto rounded-lg border-2 border-orange-500 shadow-lg shadow-orange-500/20">
+                <div>
+                    <h1 class="text-3xl font-black tracking-tighter leading-none">MANTO STORE</h1>
+                    <p class="text-sm italic text-orange-400 mt-1">A sua segunda pele dentro e fora de campo</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex gap-8 font-bold text-sm">
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Brasileiras</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Tailandesas 1:1</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Retrô</a>
+                <a href="#" class="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition">WHATSAPP</a>
+            </nav>
+        </div>
+    </header>	
+
+    <main class="container mx-auto py-12 px-4">
+        <h3 class="text-3xl font-bold mb-10 border-l-8 border-orange-500 pl-4 text-slate-800 uppercase">Coleção 2026</h3>
+        
+        <div class="relative overflow-hidden">
+            <div class="carousel-container" id="carousel">
+                
+                <div class="product-card">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                        <div class="relative h-72 overflow-hidden group">
+                            <img src="img\camisa-brasil-home-2026.webp" alt="Camisa Brasil Home 2026" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0" id="p1-img1">
+                            <img src="img\camisa-brasil-visitante-2026.webp" alt="Detalhe Camisa Brasil 2026" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100" id="p1-img2">
+                        </div>
+                        <div class="p-6 text-center">
+                            <span class="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">TAILANDESA 1:1</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026</h4>
+                            <p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+                            <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700 transition">COMPRAR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                        <div class="relative h-72 overflow-hidden group">
+                            <img src="img\camisa-real-1.jpg" alt="Camisa Real Madrid 2026" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                            <img src="img\camisa-real-2.jpg" alt="Detalhe Real Madrid 2026" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6 text-center">
+                            <span class="text-[10px] font-black bg-blue-100 text-blue-600 px-2 py-1 rounded">IMPORTADA</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Real Madrid Titular</h4>
+                            <p class="text-2xl font-black text-slate-900 mt-1">R$ 199,90</p>
+                            <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700 transition">COMPRAR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                        <div class="relative h-72 overflow-hidden group">
+                            <img src="img\camisa-retro-1.jpg" alt="Camisa Retrô França 98" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                            <img src="img\camisa-retro-2.jpg" alt="Detalhe França 98" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6 text-center">
+                            <span class="text-[10px] font-black bg-gray-100 text-gray-600 px-2 py-1 rounded">RETRÔ CLASSIC</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">França 1998 - Zidane</h4>
+                            <p class="text-2xl font-black text-slate-900 mt-1">R$ 229,90</p>
+                            <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700 transition">COMPRAR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+                        <div class="relative h-72 overflow-hidden group">
+                            <img src="img\camisa-corinthians-1.jpg" alt="Camisa Corinthians 2026" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+                            <img src="img\camisa-corinthians-2.jpg" alt="Detalhe Corinthians 2026" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6 text-center">
+                            <span class="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">BRASILEIRÃO</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Corinthians I 2026</h4>
+                            <p class="text-2xl font-black text-slate-900 mt-1">R$ 179,90</p>
+                            <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700 transition">COMPRAR</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        let index = 0;
+        const totalCards = document.querySelectorAll('.product-card').length;
+        const cardsPerView = window.innerWidth > 768 ? 3 : 1;
+
+        function moveCarousel() {
+            index++;
+            if (index > totalCards - cardsPerView) {
+                index = 0;
+            }
+            carousel.style.transform = `translateX(-${index * (100 / cardsPerView)}%)`;
+        }
+
+        // Move a cada 4 segundos
+        setInterval(moveCarousel, 4000);
+    </script>
+
+    <footer class="primary-bg text-gray-500 py-12 text-center text-xs px-4">
+        <p class="font-bold text-gray-400 uppercase tracking-widest mb-2">MANTO STORE - © 2026</p>
+        <p>Frete fixo e embalagem especial calculado no checkout via WhatsApp.</p>
+    </footer>
+
+</body>
+</html> -->
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manto Store | Camisas de Futebol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dark-blue: #0A1929;
+            --manto-orange: #F37021; 
+            --off-white: #F5F5F1;
+        }
+        body { background-color: var(--off-white); font-family: 'Inter', sans-serif; }
+        .primary-bg { background-color: var(--dark-blue); }
+        .accent-color { color: var(--manto-orange); }
+        .accent-bg { background-color: var(--manto-orange); }
+    </style>
+</head>
+<body>
+
+    <header class="primary-bg text-white py-6 shadow-2xl border-b border-orange-900/30">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center gap-5">
+                <img src="logo.jpeg" alt="Manto Store Logo" class="h-24 w-auto rounded-lg border-2 border-orange-500 shadow-lg shadow-orange-500/20">
+                <div>
+                    <h1 class="text-3xl font-black tracking-tighter leading-none">MANTO STORE</h1>
+                    <p class="text-sm italic text-orange-400 mt-1">A sua segunda pele dentro e fora de campo</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex gap-8 font-bold text-sm">
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Brasileiras</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Tailandesas 1:1</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase tracking-widest">Retrô</a>
+                <a href="#" class="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition">WHATSAPP</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-900 h-80 flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="z-10 px-4">
+            <h2 class="text-4xl md:text-6xl font-black mb-2 drop-shadow-lg">OS MANTOS MAIS COBIÇADOS</h2>
+            <p class="text-xl text-gray-200">Qualidade Premium de R$ 120,00 a R$ 240,00</p>
+            <button class="mt-6 accent-bg px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-xl">VER COLEÇÃO 2026</button>
+        </div>
+    </section>
+
+    <main class="container mx-auto py-12 px-4">
+        <h3 class="text-3xl font-bold mb-10 border-l-8 border-orange-500 pl-4 text-slate-800">Destaques da Temporada</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-100">
+                <div class="h-72 bg-gray-200 flex items-center justify-center text-gray-400 italic">
+                    <span class="text-sm font-medium uppercase tracking-widest">[Foto do Produto]</span>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">TAILANDESA PREMIUM</span>
+                    <h4 class="text-xl font-bold text-slate-800 mt-3">Camisa Seleção Brasileira 2026</h4>
+                    <div class="flex items-baseline gap-2 mt-2">
+                        <p class="text-3xl font-black text-slate-900">R$ 189,90</p>
+                        <p class="text-sm text-gray-500">no Pix</p>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 border-t pt-2 italic">+ R$ 5,00 Embalagem Especial Manto Store</p>
+                    <button class="w-full mt-6 bg-green-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-green-700 shadow-md">RESERVAR NO WHATSAPP</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-slate-200 py-12">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-6 text-center text-slate-800 tracking-tight">Tabela de Envios (Saindo de São Paulo)</h3>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-inner border border-gray-300">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b-2 border-gray-100">
+                            <th class="py-3 font-black text-slate-700 uppercase text-xs">Região</th>
+                            <th class="py-3 font-black text-slate-700 uppercase text-xs">Estimativa Frete</th>
+                            <th class="py-3 font-black text-slate-700 uppercase text-xs text-center">Prazo Médio</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600">
+                        <tr class="border-b border-gray-50"><td class="py-4 font-semibold text-slate-800">São Paulo (Capital/ABC)</td><td>R$ 18,00</td><td class="text-center italic">1-3 dias úteis</td></tr>
+                        <tr class="border-b border-gray-50"><td class="py-4 font-semibold text-slate-800">Interior de SP / RJ / MG / PR</td><td>R$ 25,00</td><td class="text-center italic">3-6 dias úteis</td></tr>
+                        <tr class="border-b border-gray-50"><td class="py-4 font-semibold text-slate-800">Centro-Oeste / Nordeste</td><td>R$ 35,00</td><td class="text-center italic">5-10 dias úteis</td></tr>
+                        <tr><td class="py-4 font-semibold text-slate-800">Norte / Extremo Sul</td><td>R$ 45,00</td><td class="text-center italic">7-15 dias úteis</td></tr>
+                    </tbody>
+                </table>
+                <div class="mt-6 bg-orange-50 p-4 rounded-lg border border-orange-100 text-[11px] text-orange-800 leading-relaxed">
+                    <strong>OBSERVAÇÕES:</strong> Enviamos via Melhor Envio com seguro contra extravio. Por sermos operação Pessoa Física, o despacho acompanha Declaração de Conteúdo conforme exigência dos Correios.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="primary-bg text-gray-500 py-12 text-center text-xs px-4">
+        <div class="flex justify-center mb-6 opacity-30">
+            <img src="uploaded:image_f60e45.jpg" alt="Logo Footer" class="h-10 w-auto grayscale">
+        </div>
+        <p class="font-bold text-gray-400 uppercase tracking-widest mb-2">MANTO STORE - Onde o futebol vive.</p>
+        <p>Operação por Pessoa Física - Política de troca: 2 dias após o recebimento.</p>
+        <p class="mt-4">© 2026 Manto Store. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manto Store | Camisas de Futebol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dark-blue: #0A1929;
+            --manto-orange: #F37021; /* Cor extraída do logo */
+            --off-white: #F5F5F1;
+        }
+        body { background-color: var(--off-white); font-family: 'Inter', sans-serif; }
+        .primary-bg { background-color: var(--dark-blue); }
+        .accent-color { color: var(--manto-orange); }
+        .accent-bg { background-color: var(--manto-orange); }
+    </style>
+</head>
+<body>
+
+    <header class="primary-bg text-white p-4 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpeg" alt="Manto Store Logo" class="h-16 w-16 rounded-full border-2 border-orange-500">
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tighter">MANTO STORE</h1>
+                    <p class="text-xs italic text-orange-400">A sua segunda pele dentro e fora de campo</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6 font-semibold text-sm">
+                <a href="#" class="hover:text-orange-500 transition">BRASILEIRAS</a>
+                <a href="#" class="hover:text-orange-500 transition">TAILANDESAS 1:1</a>
+                <a href="#" class="hover:text-orange-500 transition">RETRÔ</a>
+                <a href="#" class="hover:text-orange-500 transition text-green-400">WHATSAPP</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-900 h-64 flex items-center justify-center text-center text-white">
+        <div class="z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-2">OS MANTOS MAIS COBIÇADOS</h2>
+            <p class="text-lg text-gray-300">Qualidade Premium de R$ 120,00 a R$ 240,00</p>
+            <button class="mt-4 accent-bg px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">VER COLEÇÃO 2026</button>
+        </div>
+    </section>
+
+    <main class="container mx-auto py-10 px-4">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-orange-500 pl-3">Destaques da Temporada</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition">
+                <div class="h-64 bg-gray-200 flex items-center justify-center text-gray-400 italic">
+                    [Foto Camisa Tailandesa 1:1]
+                </div>
+                <div class="p-4">
+                    <span class="text-xs font-bold text-orange-600">TAILANDESA PREMIUM</span>
+                    <h4 class="text-lg font-bold text-slate-800">Camisa Seleção Brasileira 2026</h4>
+                    <p class="text-2xl font-black text-slate-900 mt-2">R$ 189,90</p>
+                    <p class="text-xs text-gray-500 mt-1">+ Frete calculado por região</p>
+                    <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR NO WHATSAPP</button>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+    <section class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl font-bold mb-4 text-center">Estimativa de Envio (Pessoa Física)</h3>
+            <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2">Região</th>
+                            <th class="py-2">Média Frete</th>
+                            <th class="py-2">Embalagem Especial</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600">
+                        <tr><td class="py-2">São Paulo / Grande SP</td><td>R$ 18,00</td><td>R$ 5,00</td></tr>
+                        <tr><td class="py-2">Sul / Sudeste</td><td>R$ 25,00</td><td>R$ 5,00</td></tr>
+                        <tr><td class="py-2">Centro-Oeste / Nordeste</td><td>R$ 35,00</td><td>R$ 5,00</td></tr>
+                        <tr><td class="py-2">Norte</td><td>R$ 45,00</td><td>R$ 5,00</td></tr>
+                    </tbody>
+                </table>
+                <p class="mt-4 text-[10px] text-gray-400">*Valores baseados em contratos via Melhor Envio/Correios para Pessoa Física.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="primary-bg text-gray-400 py-8 text-center text-xs">
+        <p>MANTO STORE - CNPJ EM BREVE (Vendas via CPF sob regime de Declaração de Conteúdo)</p>
+        <p class="mt-2">Trocas em até 2 dias após recebimento conforme política interna.</p>
+    </footer>
+
+</body>
+</html>
+-->
