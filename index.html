@@ -5,48 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manto Store | Camisas de Futebol</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --dark-blue: #0A1929;
-            --manto-orange: #F37021; 
-            --off-white: #F5F5F1;
-        }
-        body { background-color: var(--off-white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .primary-bg { background-color: var(--dark-blue); }
-        .accent-bg { background-color: var(--manto-orange); }
-        
-        .carousel-container { display: flex; transition: transform 0.5s ease-in-out; }
-        .product-card { min-width: calc(100% / 3); padding: 0 10px; }
-        @media (max-width: 768px) { .product-card { min-width: 100%; } }
-        
-        .img-switch { transition: opacity 0.5s; }
-    </style>
+	<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <header class="primary-bg text-white py-6 shadow-2xl border-b border-orange-900/30 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center gap-5">
-                <img src="img/logo.jpeg" alt="Manto Store Logo" class="h-20 w-auto rounded-lg border-2 border-orange-500 shadow-lg shadow-orange-500/20">
-                <div>
-                    <h1 class="text-2xl font-black tracking-tighter leading-none">MANTO STORE</h1>
-                    <p class="text-[10px] italic text-orange-400 mt-1 uppercase tracking-widest">A sua segunda pele</p>
-                </div>
-            </div>
-            <nav class="hidden lg:flex gap-6 font-bold text-xs uppercase tracking-widest">
-                <a href="#colecao" class="hover:text-orange-500 transition-colors">Coleção 2026</a>
-                <a href="#brasileiras" class="hover:text-orange-500 transition-colors">Brasileiras</a>
-                <a href="#tailandesas" class="hover:text-orange-500 transition-colors">Tailandesas 1:1</a>
-                <a href="#retro" class="hover:text-orange-500 transition-colors">Retrô</a>
-                <a href="#" class="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition">WHATSAPP</a>
-            </nav>
-        </div>
-    </header>
+	<header class="primary-bg text-white py-4 shadow-2xl border-b border-orange-900/30 sticky top-0 z-50">
+		<div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 items-center px-4 gap-4">
+			
+			<div class="flex items-center gap-4">
+				<img src="img/logo.jpeg" alt="Manto Store Logo" class="h-16 w-auto rounded-lg border-2 border-orange-500">
+				<div class="hidden sm:block">
+					<h1 class="text-xl font-black tracking-tighter leading-none">MANTO STORE</h1>
+					<p class="text-[9px] italic text-orange-400 mt-1 uppercase tracking-widest">A sua segunda pele</p>
+				</div>
+			</div>
+
+			<div class="relative w-full max-w-md mx-auto">
+				<input 
+					type="text" 
+					id="searchInput" 
+					placeholder="Buscar manto..." 
+					class="w-full bg-[#0A1929] text-white border border-orange-900/50 pl-10 pr-4 py-2 rounded-full text-sm focus:outline-none focus:border-orange-500 transition-all placeholder:text-gray-500"
+				>
+				<div class="absolute left-3 top-2.5 text-gray-500">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+					</svg>
+				</div>
+			</div>
+
+			<nav class="hidden lg:flex justify-end gap-5 font-bold text-[10px] uppercase tracking-widest">
+				<a href="#colecao" class="hover:text-orange-500 transition-colors self-center">COPA</a>
+				<a href="#nacionais" class="hover:text-orange-500 transition-colors self-center">Nacionais</a>
+				<a href="#internacionais" class="hover:text-orange-500 transition-colors self-center">Internacionais</a>
+				<a href="#" class="bg-green-600 px-3 py-2 rounded text-white hover:bg-green-700 transition">WHATSAPP</a>
+			</nav>
+			
+		</div>
+	</header>	
+	
 
     <main class="container mx-auto py-12 px-4 space-y-20">
 
+		<!--
         <section id="colecao" class="scroll-mt-32">
-            <h3 class="text-3xl font-bold mb-10 border-l-8 border-orange-500 pl-4 text-slate-800 uppercase">Coleção 2026</h3>
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-orange-500 pl-4 text-slate-800 uppercase">Copa do Mundo</h3>
             <div class="relative overflow-hidden">
                 <div class="carousel-container" id="carousel-colecao">
                     <div class="product-card">
@@ -56,19 +60,97 @@
                                 <img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
                             </div>
                             <div class="p-6 text-center">
-                                <span class="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
-                                <h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026</h4>
+                                <span class="badge-tag text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+                                <h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026 | Linha Tailandesa</h4>
                                 <p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
                                 <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
+		-->
+		<section id="colecao" class="py-16 bg-white overflow-hidden">
+			<div class="container mx-auto px-4 relative">
+				<h2 class="text-3xl font-black text-slate-800 mb-8 border-l-8 border-orange-500 pl-4 uppercase">
+					Coleção Destaque
+				</h2>
 
-        <section id="brasileiras" class="scroll-mt-32">
-            <h3 class="text-3xl font-bold mb-10 border-l-8 border-green-600 pl-4 text-slate-800 uppercase">Brasileiras</h3>
+				<div class="absolute right-4 top-0 flex gap-2">
+					<button id="prevBtn" class="carousel-btn shadow-lg" disabled>
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+					</button>
+					<button id="nextBtn" class="carousel-btn shadow-lg">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+					</button>
+				</div>
+
+				<div class="carousel-wrapper">
+					<div id="mainCarousel" class="carousel-container">
+						<div class="product-card float-animation">
+							<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+								<div class="relative h-72 overflow-hidden group">
+									<img src="img/camisa-brasil-home-2026.webp" alt="Brasil Home" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+									<img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+								</div>
+								<div class="p-6 text-center">
+									<span class="badge-tag text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+									<h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026 | Linha Tailandesa</h4>
+									<p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+									<button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-card float-animation">
+							<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+								<div class="relative h-72 overflow-hidden group">
+									<img src="img/camisa-brasil-home-2026.webp" alt="Brasil Home" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+									<img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+								</div>
+								<div class="p-6 text-center">
+									<span class="badge-tag text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+									<h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026 | Linha Tailandesa</h4>
+									<p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+									<button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-card float-animation">
+							<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+								<div class="relative h-72 overflow-hidden group">
+									<img src="img/camisa-brasil-home-2026.webp" alt="Brasil Home" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+									<img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+								</div>
+								<div class="p-6 text-center">
+									<span class="badge-tag text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+									<h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026 | Linha Tailandesa</h4>
+									<p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+									<button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-card float-animation">
+							<div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
+								<div class="relative h-72 overflow-hidden group">
+									<img src="img/camisa-brasil-home-2026.webp" alt="Brasil Home" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
+									<img src="img/camisa-brasil-visitante-2026.webp" alt="Brasil Away" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
+								</div>
+								<div class="p-6 text-center">
+									<span class="badge-tag text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DESTAQUE</span>
+									<h4 class="text-lg font-bold text-slate-800 mt-2">Brasil Home 2026 | Linha Tailandesa</h4>
+									<p class="text-2xl font-black text-slate-900 mt-1">R$ 189,90</p>
+									<button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+
+        <section id="nacionais" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-green-600 pl-4 text-slate-800 uppercase">Nacionais</h3>
             <div class="relative overflow-hidden">
                 <div class="carousel-container" id="carousel-brasileiras">
                     <div class="product-card">
@@ -78,7 +160,7 @@
                                 <img src="img/camisa-1-corinthians-2026-costas.png" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
                             </div>
                             <div class="p-6 text-center">
-                                <span class="text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
+                                <span class="badge-tag text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
                                 <h4 class="text-lg font-bold text-slate-800 mt-2">Corinthians I 2026</h4>
                                 <p class="text-2xl font-black text-slate-900 mt-1">R$ 179,90</p>
                                 <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
@@ -92,7 +174,7 @@
                                 <img src="img/camisa-2-corinthians-2026-costas.png" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
                             </div>
                             <div class="p-6 text-center">
-                                <span class="text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
+                                <span class="badge-tag text-[10px] font-black bg-slate-100 text-slate-600 px-2 py-1 rounded">NACIONAL</span>
                                 <h4 class="text-lg font-bold text-slate-800 mt-2">Corinthians II 2026</h4>
                                 <p class="text-2xl font-black text-slate-900 mt-1">R$ 179,90</p>
                                 <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
@@ -103,8 +185,8 @@
             </div>
         </section>
 
-        <section id="tailandesas" class="scroll-mt-32">
-            <h3 class="text-3xl font-bold mb-10 border-l-8 border-blue-500 pl-4 text-slate-800 uppercase">Tailandesas 1:1</h3>
+        <section id="internacionais" class="scroll-mt-32">
+            <h3 class="text-3xl font-bold mb-10 border-l-8 border-blue-500 pl-4 text-slate-800 uppercase">Internacionais</h3>
             <div class="relative overflow-hidden">
                 <div class="carousel-container" id="carousel-tailandesas">
                     <div class="product-card">
@@ -114,7 +196,7 @@
                                 <img src="img/camisa-real-2.jpg" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
                             </div>
                             <div class="p-6 text-center">
-                                <span class="text-[10px] font-black bg-blue-100 text-blue-600 px-2 py-1 rounded">IMPORTADA</span>
+                                <span class="badge-tag text-[10px] font-black bg-blue-100 text-blue-600 px-2 py-1 rounded">IMPORTADA</span>
                                 <h4 class="text-lg font-bold text-slate-800 mt-2">Real Madrid 2026</h4>
                                 <p class="text-2xl font-black text-slate-900 mt-1">R$ 199,90</p>
                                 <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
@@ -123,29 +205,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="retro" class="scroll-mt-32">
-            <h3 class="text-3xl font-bold mb-10 border-l-8 border-yellow-500 pl-4 text-slate-800 uppercase">Retrô Classic</h3>
-            <div class="relative overflow-hidden">
-                <div class="carousel-container" id="carousel-retro">
-                    <div class="product-card">
-                        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-full">
-                            <div class="relative h-72 overflow-hidden group">
-                                <img src="img/camisa-retro-1.jpg" alt="França 98" class="w-full h-full object-cover absolute img-switch opacity-100 group-hover:opacity-0">
-                                <img src="img/camisa-retro-2.jpg" alt="Detalhe" class="w-full h-full object-cover absolute img-switch opacity-0 group-hover:opacity-100">
-                            </div>
-                            <div class="p-6 text-center">
-                                <span class="text-[10px] font-black bg-yellow-100 text-yellow-700 px-2 py-1 rounded">VINTAGE</span>
-                                <h4 class="text-lg font-bold text-slate-800 mt-2">França 1998 - Zidane</h4>
-                                <p class="text-2xl font-black text-slate-900 mt-1">R$ 229,90</p>
-                                <button class="w-full mt-4 bg-green-600 text-white py-2 rounded font-bold hover:bg-green-700">COMPRAR</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section> 
 
     </main>
 
@@ -174,6 +234,175 @@
         setupCarousel('carousel-tailandesas');
         setupCarousel('carousel-retro');
     </script>
+	
+	<script>
+		<!-- document.getElementById('searchInput').addEventListener('input', function(e) { -->
+		<!-- const term = e.target.value.toLowerCase(); -->
+		<!-- const products = document.querySelectorAll('.product-card'); -->
+
+		<!-- products.forEach(product => { -->
+			<!-- const title = product.querySelector('h4').innerText.toLowerCase(); -->
+			<!-- if (title.includes(term)) { -->
+				<!-- product.style.display = "block"; -->
+				<!-- product.style.opacity = "1"; -->
+			<!-- } else { -->
+				<!-- product.style.display = "none"; -->
+				<!-- product.style.opacity = "0"; -->
+			<!-- } -->
+		<!-- }); -->
+	<!-- }); -->
+		document.getElementById('searchInput').addEventListener('input', function(e) {
+			const term = e.target.value.toLowerCase();
+			const products = document.querySelectorAll('.product-card');
+
+			products.forEach(product => {
+				// Pega o título do produto
+				const title = product.querySelector('h4').innerText.toLowerCase();
+				
+				// Pega todas as tags (badges) dentro deste produto e junta em um texto só
+				const tags = Array.from(product.querySelectorAll('.badge-tag'))
+								  .map(tag => tag.innerText.toLowerCase())
+								  .join(' ');
+
+				// Verifica se o termo pesquisado está no título OU nas tags
+				if (title.includes(term) || tags.includes(term)) {
+					product.style.display = "block";
+					setTimeout(() => product.style.opacity = "1", 10);
+				} else {
+					product.style.opacity = "0";
+					// Espera a transição de opacidade acabar para remover do layout
+					setTimeout(() => product.style.display = "none", 300);
+				}
+			});
+
+			// Opcional: Pausar carrosséis enquanto filtra para evitar bugs visuais
+			const isFiltering = term.length > 0;
+			// Aqui você pode adicionar uma lógica para travar o carrossel se desejar
+		});	
+	</script>
+	
+	<script>
+		<!-- const carousel = document.getElementById('mainCarousel'); -->
+		<!-- const prevBtn = document.getElementById('prevBtn'); -->
+		<!-- const nextBtn = document.getElementById('nextBtn'); -->
+		<!-- const cards = document.querySelectorAll('.product-card'); -->
+
+		<!-- let currentIndex = 0; -->
+		<!-- const totalCards = cards.length; -->
+		<!-- const visibleCards = window.innerWidth > 768 ? 3 : 1; -->
+		<!-- const maxIndex = totalCards - visibleCards; -->
+
+		<!-- function updateCarousel() { -->
+			<!-- const cardWidth = cards[0].offsetWidth; -->
+			<!-- carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`; -->
+			
+			<!-- // Desativar setas nos limites -->
+			<!-- prevBtn.disabled = currentIndex === 0; -->
+			<!-- nextBtn.disabled = currentIndex >= maxIndex; -->
+		<!-- } -->
+
+		<!-- // Clique para Direita (1 em 1) -->
+		<!-- nextBtn.addEventListener('click', () => { -->
+			<!-- if (currentIndex < maxIndex) { -->
+				<!-- currentIndex++; -->
+				<!-- updateCarousel(); -->
+			<!-- } -->
+		<!-- }); -->
+
+		<!-- // Clique para Esquerda (1 em 1) -->
+		<!-- prevBtn.addEventListener('click', () => { -->
+			<!-- if (currentIndex > 0) { -->
+				<!-- currentIndex--; -->
+				<!-- updateCarousel(); -->
+			<!-- } -->
+		<!-- }); -->
+
+		<!-- // Auto-rotação de 3 em 3 a cada 5 segundos -->
+		<!-- setInterval(() => { -->
+			<!-- if (currentIndex + visibleCards <= maxIndex) { -->
+				<!-- currentIndex += visibleCards; -->
+			<!-- } else { -->
+				<!-- currentIndex = 0; // Volta ao início -->
+			<!-- } -->
+			<!-- updateCarousel(); -->
+		<!-- }, 5000); -->
+
+		<!-- // Ajustar se a janela mudar de tamanho -->
+		<!-- window.addEventListener('resize', updateCarousel); -->
+		const carousel = document.getElementById('mainCarousel');
+		const prevBtn = document.getElementById('prevBtn');
+		const nextBtn = document.getElementById('nextBtn');
+		const cards = document.querySelectorAll('.product-card');
+
+		let currentIndex = 0;
+		let autoPlayTimer; // Timer da rotação de 5s
+		let resumeTimer;   // Timer da espera de 30s
+		const totalCards = cards.length;
+		const visibleCards = window.innerWidth > 768 ? 3 : 1;
+		const maxIndex = totalCards - visibleCards;
+
+		function updateCarousel() {
+			const cardWidth = cards[0].offsetWidth;
+			carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+			
+			prevBtn.disabled = currentIndex === 0;
+			nextBtn.disabled = currentIndex >= maxIndex;
+		}
+
+		// Função para iniciar o movimento automático (5 segundos)
+		function startAutoPlay() {
+			stopAutoPlay(); // Limpa antes de iniciar para não duplicar
+			autoPlayTimer = setInterval(() => {
+				if (currentIndex + visibleCards <= maxIndex) {
+					currentIndex += visibleCards;
+				} else {
+					currentIndex = 0;
+				}
+				updateCarousel();
+			}, 10000);
+		}
+
+		// Função para parar o movimento automático
+		function stopAutoPlay() {
+			clearInterval(autoPlayTimer);
+		}
+
+		// Função que gerencia a pausa manual
+		function handleManualInteraction() {
+			stopAutoPlay();      // Para o carrossel imediatamente
+			clearTimeout(resumeTimer); // Limpa o contador de retomada anterior
+
+			// Define para retomar após 30 segundos de inatividade
+			resumeTimer = setTimeout(() => {
+				startAutoPlay();
+			}, 30000); 
+		}
+
+		// Eventos de Clique
+		nextBtn.addEventListener('click', () => {
+			if (currentIndex < maxIndex) {
+				currentIndex++;
+				updateCarousel();
+				handleManualInteraction(); // Aciona a pausa
+			}
+		});
+
+		prevBtn.addEventListener('click', () => {
+			if (currentIndex > 0) {
+				currentIndex--;
+				updateCarousel();
+				handleManualInteraction(); // Aciona a pausa
+			}
+		});
+
+		// Inicia o carrossel pela primeira vez
+		startAutoPlay();
+
+		// Ajuste se a janela mudar de tamanho
+		window.addEventListener('resize', () => {
+			updateCarousel();
+		});		
+	</script>
 
     <footer class="primary-bg text-gray-500 py-12 text-center text-xs px-4">
         <p class="font-bold text-gray-400 uppercase tracking-widest mb-2">MANTO STORE - © 2026</p>

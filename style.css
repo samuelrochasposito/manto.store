@@ -1,0 +1,115 @@
+/* Variáveis de Identidade Visual */
+:root {
+    --dark-blue: #0A1929;
+    --manto-orange: #F37021; 
+    --off-white: #F5F5F1;
+}
+
+/* Configurações Gerais */
+body { 
+    background-color: var(--off-white); 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; 
+}
+
+.primary-bg { background-color: var(--dark-blue); }
+.accent-bg { background-color: var(--manto-orange); }
+
+/* Estrutura do Carrossel */
+.carousel-container { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.product-card { 
+    min-width: calc(100% / 3); 
+    padding: 0 10px; 
+	transition: opacity 0.3s ease; /* Adicione esta linha */
+}
+
+/* Ajuste Responsivo para Celulares */
+@media (max-width: 768px) { 
+    .product-card { 
+        min-width: 100%; 
+    } 
+}
+
+/* Efeito de Troca de Imagem (Hover) */
+.img-switch { 
+    transition: opacity 0.5s; 
+}
+
+/* Opcional: Estilização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--off-white);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--manto-orange);
+    border-radius: 10px;
+}
+
+
+/* No seu style.css */
+#searchInput {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil para combinar com o header */
+    color: white;
+}
+
+#searchInput::placeholder {
+    color: #64748b; /* Cor das letras da dica de busca */
+}
+
+/* Transição suave para os cards aparecerem/sumirem */
+.product-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito Flutuar */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Container do Carrossel */
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ajuste das Setas */
+.carousel-btn {
+    background: rgba(10, 25, 41, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 20;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: var(--manto-orange);
+    transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
